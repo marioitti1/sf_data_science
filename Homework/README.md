@@ -25,9 +25,7 @@ The **score_game** function calculates the avarage number of attempts needed to 
 
 import numpy as np
 
-# Load funcitons from main program
 from guess_number_optimized import guess_number
 from guess_number_optimized import score_game
 
-# Print the results
 print(score_game(guess_number))
