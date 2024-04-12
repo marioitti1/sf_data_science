@@ -31,12 +31,14 @@ def score_game(random_predict) -> int:
     Returns:
         int: avarage number of tries
     """
-    count_ls = []
-    np.random.seed(1) # fix the sid for 
+    #count_ls = []
+    #np.random.seed(1) # fix the sid for 
     random_array = np.random.randint(1, 101, size=(1000)) # list of number
+    print(random_array)
+    #for number in random_array:
+    #    count_ls.append(random_predict(number))
     
-    for number in random_array:
-        count_ls.append(random_predict(number))
+    count_ls = list(map(random_predict, random_array))
     
     score = int(np.mean(count_ls))
     print(f"Your algorithm guess the number avarage for {score} tries")
